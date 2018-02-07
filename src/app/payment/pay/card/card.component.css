@@ -1,0 +1,36 @@
+.card
+{
+    display: inline-block;    
+    width: 33%;
+    min-width: 210px;
+    min-height: 120px;
+    padding: 2%;
+    margin: 2% 2% 2% 0;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px #C0C0C0;
+}
+.addInfo
+{
+    display: inline-block;
+    width: 49%;
+}
+.cardType
+{
+    float: right;
+    width: 15%;
+    min-width: 30px;
+    margin-bottom: 2%;
+}
+@media screen and (max-width: 768px)
+{
+    .addInfo
+    {
+        display: block;
+        width: 100%;
+    }
+    .card
+    {
+        display: block;
+        margin: 2% auto;
+    }
+}

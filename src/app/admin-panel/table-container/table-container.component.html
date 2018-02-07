@@ -1,0 +1,8 @@
+<h1>Панель администратора</h1>
+<ul>
+    <input type="radio" name="tableTypes" value="cardTable" id="card" checked>
+    <label routerLink="/admin/tableContainer/cardTable" for="card">Платежи с карты</label>
+    <input type="radio" name="tableTypes" value="requestTable" id="request">
+    <label routerLink="/admin/tableContainer/requestTable" for="request">Запрошенные платежи</label>
+</ul>
+<router-outlet></router-outlet>

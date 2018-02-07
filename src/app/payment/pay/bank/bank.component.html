@@ -1,0 +1,20 @@
+<p>Сформируйте платёжку и загрузите её в свой банк для подписи</p>
+<form class="bankData" [formGroup]="bankForm" (submit)="onSubmit()">
+    <label for="sender_TIX">От кого</label>
+    <input type="text" id="sender_TIX" formControlName="sender" placeholder="ИНН или название плательщика" pattern="\d{10,12}" minlength="10" maxlength="12"><br>
+    <label for="destination">БИК</label>
+    <input type="text" id="bic" formControlName="bic" pattern="\d{9}" maxlength="9"><br>
+    <label for="destination">Номер счёта</label>
+    <input type="text" id="destination" formControlName="destination" placeholder="Назначение платежа" pattern="\d{20}" maxlength="20"><br>
+    <label for="VAT">За что</label>
+        <input class="variants_VAT" name="vat" value="0" formControlName="vat" type="radio" id="not_VAT" checked>
+        <label for="not_VAT">Без НДС</label>
+        <input class="variants_VAT" name="vat" value="10" formControlName="vat" type="radio" id="VAT_10">
+        <label for="VAT_10">НДС 10%</label>
+        <input class="variants_VAT" name="vat" value="18" formControlName="vat" type="radio" id="VAT_18">
+        <label for="VAT_18">НДС 18%</label><br>
+    <label for="count">Сколько</label>
+    <input type="text" id="count" formControlName="payment" placeholder="От 1000 до 75000 ₽" pattern="\d{4,5}" maxlength="5"><br>
+    <input type="submit" value="Получить файл для интернет-банка" [disabled]="bankForm.invalid"><br>
+    <input type="reset" value="Очистить форму">
+</form>

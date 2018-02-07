@@ -1,0 +1,54 @@
+header
+{
+    border-bottom: 1px solid #C0C0C0;
+    color: #CD853F;
+}
+header li
+{
+    display: inline-block;
+}
+header li:first-of-type
+{
+    width: 59%;
+}
+header li:last-of-type
+{
+    width: 39%;
+    text-align: right;
+}
+h1
+{
+    color: #000;
+    font: 600 1.5rem Arial, sans-serif;
+}
+.telephone
+{
+    color: #000;
+}
+header a
+{
+    margin: 0 2%;
+    text-decoration: none;
+    color: inherit;
+}
+.header_image
+{
+    width: 70%;
+    min-width: 220px;
+}
+@media screen and (max-width: 768px)
+{
+    header li
+    {
+        display: list-item;
+    }
+    header li:first-of-type,
+    header li:last-of-type
+    {
+        width: 100%;
+    }
+    header li:last-of-type
+    {
+        text-align: center;
+    }
+}

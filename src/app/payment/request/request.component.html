@@ -1,0 +1,24 @@
+<p>Создайте платёжку, а Индивидуальный предприниматель Ромахина Галина Евгеньевна подпишет её у себя в интернет-банке</p>
+<form class="getPayData" [formGroup]="requestForm" (submit)="onSubmit()">
+    <label for="getter_TIX">ИНН получателя</label>
+    <input type="text" id="getter_TIX" formControlName="sender" placeholder="ИНН или название получателя" minlength="10" maxlength="12"><br>
+    <label for="BIC">БИК</label>
+    <input type="text" id="BIC" formControlName="bic" pattern="\d{9}" maxlength="9"><br>
+    <label for="account_number">Номер счета</label>
+    <input type="text" id="account_number" formControlName="destination" placeholder="Назначение платежа" pattern="\d{20}" maxlength="20"><br>
+    <label for="VAT">За что</label>
+        <input class="variants_VAT" formControlName="vat" value="0" name="vat" type="radio" id="2not_VAT" checked>
+        <label for="2not_VAT">Без НДС</label>
+        <input class="variants_VAT" formControlName="vat" value="10" name="vat" type="radio" id="2VAT_10">
+        <label for="2VAT_10">НДС 10%</label>
+        <input class="variants_VAT" formControlName="vat" value="18" name="vat" type="radio" id="2VAT_18">
+        <label for="2VAT_18">НДС 18%</label><br>
+    <label for="payment">Сколько</label>
+    <input type="text" id="payment" formControlName="payment" placeholder="От 1000 до 75000 ₽" patten="\d{4,5}" maxlength="5"><br>
+    <label for="telephone">Номер телефона</label>
+    <input type="tel" id="telephone" formControlName="telephone" title="Оставляя телефон, вы соглашаетесь на обработку персональных данных"><br>
+    <label for="email">Эл.почта</label>
+    <input type="email" id="email" formControlName="email" placeholder="Для уведомлений об оплате"><br>
+    <input type="submit" value="Создать платёж" [disabled]="requestForm.invalid"><br>
+    <input type="reset" value="Очистить форму">
+</form>

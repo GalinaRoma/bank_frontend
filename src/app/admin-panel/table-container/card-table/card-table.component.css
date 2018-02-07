@@ -1,0 +1,20 @@
+caption 
+{
+    font: 600 20px Arial, sans-serif;
+    padding-bottom: 16px; 
+}
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+th
+{
+    color: #CD853F;
+}
+td, th
+{
+    border: 1px solid #CD853F;
+    font: 14px Arial, sans-serif;
+    text-align: center;
+}

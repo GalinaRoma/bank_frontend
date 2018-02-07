@@ -1,0 +1,24 @@
+<table>
+  <caption>Платежи с карты</caption>
+  <tr>
+    <th>ID платежа</th>
+    <th>Номер карты</th>
+    <th>Срок действия</th>
+    <th>CVC</th>
+    <th>Сумма платежа</th>
+    <th>Комментарий</th>
+    <th>Эл.почта</th>
+    <th>Безопасный платеж</th>
+  </tr>
+  <tr *ngFor="let item of dataFromTable">
+    <td>{{item.id}}</td>
+    <td>{{item.number}}</td>
+    <td>{{item.date}}</td>
+    <td>{{item.cvc}}</td>
+    <td>{{item.payment}}</td>
+    <td>{{item.comment}}</td>
+    <td>{{item.email}}</td>
+    <td><input type="checkbox" [checked]='item.safety' (change)="changeSafety(item.id)"></td>
+  </tr>
+</table>
+
